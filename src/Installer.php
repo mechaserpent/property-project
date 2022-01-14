@@ -49,7 +49,7 @@ class Installer
 
 
         echo "Install database\n";
-        $installer->runSQL($config["database"]["hostname"], $config["database"]["database"], $config["database"]["username"],   $config["database"]["password"], "111111");
+        $installer->runSQL($config["database"]["hostname"], $config["database"]["database"], $config["database"]["username"], $config["database"]["password"]);
     }
 
     function input(string $prompt = null): string
