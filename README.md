@@ -27,10 +27,9 @@ php composer.phar install
 ```
 
 ### 5. change base path and config
-```
 cms/vendor/mathsgod/puxt-vx/www/index.html
+
 cms/vendor/mathsgod/puxt-vx/www/config.json
-```
 
 
 
