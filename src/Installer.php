@@ -8,6 +8,51 @@ class Installer
     {
         $pdo = new PDO("mysql:host=$host;dbname=$dbname", $username, $password);
         $pdo->exec(file_get_contents(__DIR__ . "/puxt.sql"));
+
+
+        //
+
+        $pdo->exec(
+            <<<SQL
+CREATE TABLE `Document` (
+    `document_id` int(11) NOT NULL AUTO_INCREMENT,
+    `name` varchar(100) DEFAULT NULL,
+    `created_time` datetime DEFAULT NULL,
+    `created_by` int(11) DEFAULT NULL,
+    PRIMARY KEY (`document_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+SQL
+        );
+
+
+        $pdo->exec(
+            <<<SQL
+CREATE TABLE `Updates` (
+    `updates_id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+    `type` int(11) DEFAULT NULL,
+    `sequence` int(11) NOT NULL DEFAULT '0',
+    `status` int(11) NOT NULL DEFAULT '2',
+    `title_en` text,
+    `title_tc` text,
+    `title_sc` text,
+    `file_en` text,
+    `file_tc` text,
+    `file_sc` text,
+    `file_hash_en` longtext,
+    `file_hash_tc` longtext,
+    `file_hash_sc` longtext,
+    `link_en` text,
+    `link_tc` text,
+    `link_sc` text,
+    `date` date DEFAULT NULL,
+    `created_time` datetime NOT NULL,
+    `created_by` int(11) NOT NULL,
+    `updated_time` datetime DEFAULT NULL,
+    `updated_by` int(11) DEFAULT NULL,
+    PRIMARY KEY (`updates_id`)
+) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+SQL
+        );
     }
 
     public static function postPackageInstall(Event $event)
