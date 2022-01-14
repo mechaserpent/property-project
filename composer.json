@@ -9,14 +9,11 @@
     ],
     "require": {},
     "autoload": {
-        "files": [
-            "Installer.php"
-        ]
+        "psr-4": {
+            "": "src/"
+        }
     },
     "scripts": {
-        "post-package-install": [
-            "Installer::postPackageInstall"
-        ],
         "post-create-project-cmd": [
             "Installer::postPackageInstall"
         ]
