@@ -14,9 +14,12 @@
         ]
     },
     "scripts": {
-        "post-create-project-cmd": "Installer::postPackageInstall"
+        "post-package-install": [
+            "Installer::postPackageInstall"
+        ],
+        "post-create-project-cmd": [
+            "Installer::postPackageInstall"
+        ]
     },
-    "require-dev": {
-        "composer/composer": "^2.2"
-    }
+    "require-dev": {}
 }
