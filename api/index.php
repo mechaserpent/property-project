@@ -9,6 +9,6 @@ $loader = require_once("vendor/autoload.php");
 $app = new PUXT\App(__DIR__);
 
 $db = $app->config["database"];
-Model::SetSchema(new Schema($db["hostname"], $db["username"], $db["password"], $db["database"]));
+Model::SetSchema(new Schema($db["database"], $db["hostname"], $db["username"], $db["password"]));
 
 $app->run();
