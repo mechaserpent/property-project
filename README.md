@@ -3,8 +3,15 @@ https://getcomposer.org/download/
 
 ### 2. run command
 ```
-php composer.phar hostlink/property-project public_html
+php composer.phar create-project hostlink/property-project public_html
 ```
+
+dev mode
+```
+php composer.phar create-project hostlink/property-project:dev-main public_html
+```
+
+
 
 ### 3. install api
 ```
