@@ -95,6 +95,7 @@ SQL
 
         echo "Install database\n";
         $installer->runSQL($config["database"]["hostname"], $config["database"]["database"], $config["database"]["username"], $config["database"]["password"]);
+        echo "done\n";
     }
 
     function input(string $prompt = null): string
