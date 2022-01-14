@@ -1,5 +1,5 @@
 {
-    "name": "hostlink/property-cms",
+    "name": "hostlink/property-api",
     "type": "project",
     "authors": [
         {
@@ -9,11 +9,6 @@
     ],
     "require": {
         "mathsgod/puxt": "^2.1",
-        "mathsgod/puxt-vx": "dev-main"
-    },
-    "autoload": {
-        "psr-4": {
-            "": "class/"
-        }
+        "mathsgod/r-db": "^4.5"
     }
 }
