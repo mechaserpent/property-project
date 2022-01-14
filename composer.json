@@ -1,0 +1,11 @@
+{
+    "name": "hostlink/property-project",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Raymond Chong",
+            "email": "mathsgod@yahoo.com"
+        }
+    ],
+    "require": {}
+}
