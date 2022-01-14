@@ -10,5 +10,10 @@
     "require": {
         "mathsgod/puxt": "^2.1",
         "mathsgod/r-db": "^4.5"
+    },
+    "autoload": {
+        "psr-4": {
+            "": "class/"
+        }
     }
 }
