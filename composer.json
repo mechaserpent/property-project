@@ -7,5 +7,16 @@
             "email": "mathsgod@yahoo.com"
         }
     ],
-    "require": {}
+    "require": {},
+    "autoload": {
+        "files": [
+            "Installer.php"
+        ]
+    },
+    "scripts": {
+        "post-create-project-cmd": "Installer::postPackageInstall"
+    },
+    "require-dev": {
+        "composer/composer": "^2.2"
+    }
 }
