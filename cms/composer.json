@@ -1,0 +1,13 @@
+{
+    "name": "hostlink/property-cms",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Raymond Chong",
+            "email": "mathsgod@yahoo.com"
+        }
+    ],
+    "require": {
+        "mathsgod/puxt": "^2.1"
+    }
+}
