@@ -1,6 +1,10 @@
 ### 1. install composer
 https://getcomposer.org/download/
 
+php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');"
+php composer-setup.php
+php -r "unlink('composer-setup.php');"
+
 ### 2. run command
 ```
 php composer.phar create-project hostlink/property-project public_html
