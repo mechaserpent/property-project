@@ -21,14 +21,14 @@ php composer.phar create-project hostlink/property-project:dev-main public_html
 ### 3. install api
 ```
 cd api
-php composer.phar install
+php80 composer.phar install
 ```
 
 
 ### 4. install cms
 ```
 cd cms
-php composer.phar install
+php80 composer.phar install
 ```
 
 ### 5. change base path and config
