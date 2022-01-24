@@ -107,7 +107,7 @@ CREATE TABLE `Config` (
 
 LOCK TABLES `Config` WRITE;
 /*!40000 ALTER TABLE `Config` DISABLE KEYS */;
-INSERT INTO `Config` VALUES (1,'company','HostLink',0,1,NULL,NULL),(2,'company_logo','/images/logo/logo.png',0,1,NULL,NULL),(3,'company_url','https://www.hostlink.com.hk',0,1,NULL,NULL),(4,'copyright_name','HostLink',0,1,NULL,NULL),(5,'copyright_year','2021',0,1,NULL,NULL),(6,'copyright_url','https://www.hostlink.com.hk',0,1,NULL,NULL),(7,'login_version','v1',0,1,NULL,NULL),(8,'two_step_verification','0',0,1,NULL,NULL),(9,'biometric_authentication','0',0,1,NULL,NULL),(10,'vx_url',NULL,0,1,NULL,NULL);
+INSERT INTO `Config` VALUES (1,'company','HostLink',0,1,NULL,NULL),(2,'company_logo','/cms/images/logo/logo.png',0,1,NULL,NULL),(3,'company_url','https://www.hostlink.com.hk',0,1,NULL,NULL),(4,'copyright_name','HostLink',0,1,NULL,NULL),(5,'copyright_year','2021',0,1,NULL,NULL),(6,'copyright_url','https://www.hostlink.com.hk',0,1,NULL,NULL),(7,'login_version','v1',0,1,NULL,NULL),(8,'two_step_verification','0',0,1,NULL,NULL),(9,'biometric_authentication','0',0,1,NULL,NULL),(10,'vx_url',NULL,0,1,NULL,NULL);
 /*!40000 ALTER TABLE `Config` ENABLE KEYS */;
 UNLOCK TABLES;
 
