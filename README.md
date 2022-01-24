@@ -8,12 +8,12 @@ php -r "unlink('composer-setup.php');"
 
 ### 2. run command
 ```
-php composer.phar create-project hostlink/property-project public_html
+php80 composer.phar create-project hostlink/property-project public_html
 ```
 
 dev mode
 ```
-php composer.phar create-project hostlink/property-project:dev-main public_html
+php80 composer.phar create-project hostlink/property-project:dev-main public_html
 ```
 
 
