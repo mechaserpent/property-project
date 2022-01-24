@@ -20,7 +20,7 @@ CREATE TABLE `Document` (
     `created_time` datetime DEFAULT NULL,
     `created_by` int(11) DEFAULT NULL,
     PRIMARY KEY (`document_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 SQL
         );
 
@@ -50,7 +50,7 @@ CREATE TABLE `Updates` (
     `updated_time` datetime DEFAULT NULL,
     `updated_by` int(11) DEFAULT NULL,
     PRIMARY KEY (`updates_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=15 DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 SQL
         );
     }
