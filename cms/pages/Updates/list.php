@@ -7,6 +7,7 @@
  */
 
 use Laminas\Db\Sql\Update;
+use P\HTMLTemplateElement;
 
 return new class
 {
@@ -31,10 +32,11 @@ return new class
         $table->add("Type", "type")->sortable()->filterable($options);
 
 
-        $table->add("Preview", "preview_url")->template(function () {
-            return '<a class="btn btn-xs btn-primary" :href="`${scope.row.preview_url.en}`">EN</a> '
-                . '<a class="btn btn-xs btn-primary" :href="`${scope.row.preview_url.tc}`">TC</a> '
-                . '<a class="btn btn-xs btn-primary" :href="`${scope.row.preview_url.sc}`">SC</a> ';
+        $table->add("Preview", "preview_url")->template(function (HTMLTemplateElement $template) {
+
+            $template->innerHTML='<a class="btn btn-sm btn-primary" :href="`${scope.row.preview_url.en}`">EN</a> '
+                . '<a class="btn btn-sm btn-primary" :href="`${scope.row.preview_url.tc}`">TC</a> '
+                . '<a class="btn btn-sm btn-primary" :href="`${scope.row.preview_url.sc}`">SC</a> ';
 
 /*             return html("a")->class("btn btn-xs btn-primary")->href("{$url}/en/sales-info/" . $type[$o->type] . "?preview=1")->html("EN")->target("_blank") . " " .
                 html("a")->class("btn btn-xs btn-primary")->href("{$url}/sales-info/" . $type[$o->type] . "?preview=1")->html("TC")->target("_blank") . " " .
