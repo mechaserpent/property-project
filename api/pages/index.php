@@ -9,5 +9,6 @@ return new class
     function get()
     {
         echo "property api index";
+        die();
     }
 };
