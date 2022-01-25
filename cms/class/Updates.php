@@ -12,7 +12,10 @@ class Updates extends Model
         "Tender Document",
         "Register of Transactions",
         "Deed of Mutual Covenant",
-        "Aerial Photograph"
+        "Aerial Photograph",
+        "Sales Brochure for Parking Spaces",
+        "Price List for Parking Spaces",
+        "Ballot Result for Parking Spaces"
     ];
 
     /*   public function Delete()
