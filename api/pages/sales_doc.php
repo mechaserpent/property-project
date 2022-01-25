@@ -17,32 +17,38 @@ return new class
             "aerial photograph",
         ];
         $sv_locale = ["en", "tc", "sc"];
-        $query_type = $this->_query["type"];
-        $query_language = $this->_query["locale"];
+        $query_type = $context->query["type"];  //      $query_type = $this->_query["type"];
+        $query_language = $context->query["locale"];
 
         $res = array_search($query_language, $sv_locale);
+
         if ($res === false) return http_response_code(400);
 
         $res = array_search(str_replace("+", " ",  strtolower($query_type)), $sv_type);
         if ($res === false) return http_response_code(400);
-        $w[] = ["type = :type", ["type" => $res]];
+        $w[] = "type = $res";
 
-
-        if (intval($this->_query["preview"])) $w[] = "status = 0";
+        if (intval($context->query["preview"])) $w[] = "status = 0";
         else $w[] = "status = 1";
+        
+        //                                                              DOCUMENTATION    ===>    https://docs.laminas.dev/laminas-db/sql/
 
         if ($query_language) {
-            $data = Updates::Query()->where($w)->orderBy("date DESC,sequence DESC")->map(function ($updates) use ($query_language, $query_type) {
+            $data = Updates::Query()->where($w)->order(["date" => "DESC", "sequence" => "DESC"]);
+            //print_r($data->getSqlString());
+            //print_r($data->toArray());
+            $data = $data->map(function (Updates $updates) use ($query_language, $query_type) {
                 $updates->title = $updates->{"title_" . $query_language} ? $updates->{"title_" . $query_language} : $updates->title_en;
                 $updates->file = $updates->{"file_" . $query_language} ? $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . "/uploads/" . $updates->{"file_" . $query_language} : $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] . "/uploads/" . $updates->file_en;
-             
+
                 $result["date"] = $updates->date;
                 $result["title"] = $updates->title;
                 $result["file"] = $updates->file;
+
                 return $result;
             });
         }
-     
+
         return $data ?? [];
     }
 
