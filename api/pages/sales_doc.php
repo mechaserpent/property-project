@@ -1,5 +1,6 @@
 <?php
 
+use Laminas\Db\Sql\Expression;
 use PUXT\Context;
 
 return new class
@@ -15,6 +16,10 @@ return new class
             "register of transactions",
             "deed of mutual covenant",
             "aerial photograph",
+            "sales brochure for parking spaces",
+            "price list for parking spaces",
+            "ballot result for parking spaces"
+
         ];
         $sv_locale = ["en", "tc", "sc"];
         $query_type = $context->query["type"];  //      $query_type = $this->_query["type"];
@@ -29,13 +34,15 @@ return new class
         $w[] = "type = $res";
 
         if (intval($context->query["preview"])) $w[] = "status = 0";
-        else $w[] = "status = 1";
-        
+        else $w[] ="status = 1";
+
         //                                                              DOCUMENTATION    ===>    https://docs.laminas.dev/laminas-db/sql/
 
         if ($query_language) {
-            $data = Updates::Query()->where($w)->order(["date" => "DESC", "sequence" => "DESC"]);
-            //print_r($data->getSqlString());
+            $data = Updates::Query();
+            $data->where($w);
+            $data->order(["date" => "DESC", "sequence" => "DESC"]);
+            //print_r($data->getSqlString());            
             //print_r($data->toArray());
             $data = $data->map(function (Updates $updates) use ($query_language, $query_type) {
                 $updates->title = $updates->{"title_" . $query_language} ? $updates->{"title_" . $query_language} : $updates->title_en;
