@@ -74,6 +74,9 @@ SQL
         $config["VX"]["language"]["en"] = "English";
         $config["VX"]["language"]["zh-hk"] = "中文";
 
+        mkdir(dirname(__DIR__). "/cache", 0777 );        
+        mkdir(dirname(__DIR__). "/uploads", 0777 );
+        $config["VX"]["file_manager"]["root"] = dirname(__DIR__). "/uploads";
 
         $var = var_export($config, true);
         $var = str_replace("array (", "[", $var);
