@@ -22,7 +22,7 @@ return new class
         ];
 
         $sv_locale = ["en", "tc", "sc"];
-        $query_type = strtolower($context->query["type"]);  //      $query_type = $this->_query["type"];
+        $query_type = strtolower($context->query["type"]);
         $query_language = strtolower($context->query["locale"]);
 
         $res = array_search($query_language, $sv_locale);
