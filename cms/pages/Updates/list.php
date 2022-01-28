@@ -70,6 +70,9 @@ return new class
         $rt = $vx->ui->createTableResponse();
         $rt->setData(Updates::Query());
 
+        if ($vx->_get["t"] !== null) {
+            $rt->source->where(["status" => $vx->_get["t"]]);
+        }
 
         $rt->setDataMap(function (Updates $o) {
 
