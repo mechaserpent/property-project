@@ -15,6 +15,8 @@ class Updates extends Model
         "Aerial Photograph",
         "Sales Brochure for Parking Spaces",
         "Price List for Parking Spaces",
-        "Ballot Result for Parking Spaces"
+        "Ballot Result for Parking Spaces",
+        "Agent Corner",
+        "The Books"
     ];   
 }

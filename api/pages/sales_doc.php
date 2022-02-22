@@ -18,7 +18,9 @@ return new class
             "aerial photograph",
             "sales brochure for parking spaces",
             "price list for parking spaces",
-            "ballot result for parking spaces"
+            "ballot result for parking spaces",
+            "agent corner",
+            "the books"
         ];
 
         $sv_locale = ["en", "tc", "sc"];
@@ -51,6 +53,10 @@ return new class
                 $result["title"] = $updates->title;
                 $result["file"] = $updates->file;
 
+                $updates->url = $updates->{"file_" . $query_language} ? "/uploads/" . $updates->{"file_" . $query_language} : "/uploads/" . $updates->file_en;
+                $result["url"] = $updates->url;
+                
+                $result["cover"] = $_SERVER["REQUEST_SCHEME"] . "://" . $_SERVER["HTTP_HOST"] ."/uploads/" . $updates->thumbnail;
                 return $result;
             });
         }

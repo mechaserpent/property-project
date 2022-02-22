@@ -10,7 +10,7 @@
 
 </div>
 <script>
-    new Vue({
+    /* new Vue({
         el: "#div1",
         async created() {
             console.log("created");
@@ -24,7 +24,7 @@
             });
 
         }
-    });
+    }); */
 </script>
 
 <?php
@@ -73,6 +73,6 @@ return new class
 
     function data()
     {
-        return ["a", "b", "c"];
+        //return ["a", "b", "c"];
     }
 };

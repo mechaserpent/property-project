@@ -45,6 +45,7 @@ CREATE TABLE `Updates` (
     `link_tc` text,
     `link_sc` text,
     `date` date DEFAULT NULL,
+    `thumbnail` text,
     `created_time` datetime NOT NULL,
     `created_by` int(11) NOT NULL,
     `updated_time` datetime DEFAULT NULL,

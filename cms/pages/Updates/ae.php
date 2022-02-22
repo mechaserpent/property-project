@@ -26,7 +26,8 @@ return new class
         
         $form->add("File[TC]")->filemanager("file_tc");
         $form->add("File[SC]")->filemanager("file_sc");
-
+        
+        $form->add("Thumbnail")->filemanager("thumbnail");
         if ($vx->user->isAdmin()) {
             //$r = $form->add("CDN Link[EN]");
             //$r->input("link_en")->attr("onchange", "AddCDN(this)");
