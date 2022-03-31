@@ -9,7 +9,7 @@ class Updates extends Model
         "Sales Brochure",
         "Price List",
         "Sales Arrangements",
-        "Tender Document",
+        "Tender Documents",
         "Register of Transactions",
         "Deed of Mutual Covenant",
         "Aerial Photograph",
