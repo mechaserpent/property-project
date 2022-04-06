@@ -9,18 +9,18 @@ return new class
     {
         $w = [];
         $sv_type = [
-            "sales brochure",
-            "price list",
-            "sales arrangements",
-            "tender documents",
-            "register of transactions",
-            "deed of mutual covenant",
-            "aerial photograph",
-            "sales brochure for parking spaces",
-            "price list for parking spaces",
-            "ballot result for parking spaces",
-            "agent corner",
-            "the books"
+            0 => "sales brochure",
+            1 => "price list",
+            2 => "sales arrangements",
+            3 => "tender documents",
+            4 => "register of transactions",
+            5 => "deed of mutual covenant",
+            6 => "aerial photograph",
+            7 => "sales brochure for parking spaces",
+            8 => "price list for parking spaces",
+            9 => "ballot result for parking spaces",
+            10 => "agent corner",
+            11 => "the books"
         ];
 
         $sv_locale = ["en", "tc", "sc"];
