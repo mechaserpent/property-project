@@ -32,11 +32,15 @@ return new class
 
 
         $res = array_search(str_replace("+", " ",  $query_type), $sv_type);
+        if(!$res){
+            $res = array_search(str_replace("-", " ",  $query_type), $sv_type);
+        }
+            
         if ($res === false) return [http_response_code(400)];
-        $w[] = "type = $res";
+        $w["type"] = $res;
 
-        if (intval($context->query["preview"])) $w[] = "status = 0";
-        else $w[] = "status = 1";
+        if (intval($context->query["preview"])) $w["status"] = 0;
+        else $w["status"] = 1;
 
         //                                                              DOCUMENTATION    ===>    https://docs.laminas.dev/laminas-db/sql/
 
