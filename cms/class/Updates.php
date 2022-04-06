@@ -6,17 +6,17 @@ class Updates extends Model
 {
     const STATUS = ["Inactive", "Active", "Hide"];
     const TYPE = [
-        "Sales Brochure",
-        "Price List",
-        "Sales Arrangements",
-        "Tender Documents",
-        "Register of Transactions",
-        "Deed of Mutual Covenant",
-        "Aerial Photograph",
-        "Sales Brochure for Parking Spaces",
-        "Price List for Parking Spaces",
-        "Ballot Result for Parking Spaces",
-        "Agent Corner",
-        "The Books"
+        0 => "Sales Brochure",
+        1 => "Price List",
+        2 => "Sales Arrangements",
+        3 => "Tender Documents",
+        4 => "Register of Transactions",
+        5 => "Deed of Mutual Covenant",
+        6 => "Aerial Photograph",
+        7 => "Sales Brochure for Parking Spaces",
+        8 => "Price List for Parking Spaces",
+        9 => "Ballot Result for Parking Spaces",
+        10 => "Agent Corner",
+        11 => "The Books"    
     ];   
 }
