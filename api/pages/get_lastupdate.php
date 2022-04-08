@@ -23,6 +23,6 @@ return new class
 
         $data["date"] = ($query_language == "en") ? date("j F Y", strtotime(reset($arr))) :  date("Y年n月j日", strtotime(reset($arr)));
 
-        return $data["date"];
+        return $data;
     }
 };
